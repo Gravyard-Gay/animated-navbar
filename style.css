@@ -1,0 +1,139 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-pri: #b6b6b6;
+    --text-sec: #ececec;
+    --bg-pri: #23232e;
+    --bg-sec: #141418;
+    --transition-del: 250ms;
+    --icon-size: 5rem;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #0f0f0f, #3b3b3b);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #6649b8;
+    border-radius: 32px;
+    transition: var(--transition-del);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #8950d5;
+}
+
+
+body {
+    color: black;
+    background-color: #fff8ea;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-left: 5.2rem;
+    padding: 12px;
+}
+
+.navbar {
+    position: fixed;
+    background: var(--bg-pri);
+    transition: 200ms;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+    transition: 200ms;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-pri);
+    text-decoration: none;
+    transition: 200ms;
+}
+.link-text{display: none; margin-left: 1rem;}
+
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+	transition: 0.8s;
+}
+.nav-link:hover {color: #8950d5;}
+.nav-item:hover {background: var(--bg-sec);}
+.nav-item:hover svg {transform: rotate(360deg) scale(1.8);}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-sec);
+    background: var(--bg-sec);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+  }
+
+.logo-text {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: 200ms;
+}
+
+.logo svg {
+    color: var(--text-pri);
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    transform: rotate(0deg);
+    transition: transform 200ms;
+    scale: 1.5;
+}
+
+.navbar:hover .logo svg {
+    transform: rotate(-180deg);
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        width: 5rem;
+        height: 100vh;
+    }
+    .navbar:hover {width: 16rem;}
+    .navbar:hover .link-text {display: block;}
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .logo {display: none;}
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .nav-link {justify-content: center;}
+    main {margin: 0;}
+}
