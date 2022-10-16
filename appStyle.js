@@ -17,6 +17,42 @@ let styles = [
         bg1: '#003cde',
         bg2: '#004494',
         hi: '#ff1178'
+    },
+    purpleManiac = {
+        text: '#b0f',
+        bg1: '#1d0d2f',
+        bg2: '#0f003f',
+        hi: '#dd0870'
+    },
+    Pj = {
+        text: '#9f009f',
+        bg1: '#2d001a',
+        bg2: '#200010',
+        hi: '#ff00ff'
+    },
+    haloween = {
+        text: '#ff3800',
+        bg1: '#5d2d00',
+        bg2: '#2d0d00',
+        hi: '#f80'
+    },
+    xMas = {
+        text: '#ddd',
+        bg1: '#610',
+        bg2: '#410',
+        hi: '#f00'
+    },
+    pride = {
+        text: '#000',
+        bg1: 'linear-gradient(0deg, rgba(255,100,100,1) 0%, rgba(255,246,100,1) 25%, rgba(78,255,102,1) 50%, rgba(78,75,255,1) 75%, rgba(255,85,254,1) 100%)',
+        bg2: '#0005',
+        hi: '#fff'
+    },
+    naughty = {
+        text: '#fff',
+        bg1: "#b00b20",
+        bg2: '#d1c',
+        hi: '#5eecc5'
     }
 ]
 let sNum = 0
@@ -29,9 +65,5 @@ document.querySelector('#theme').addEventListener('click', () => {
     root.style.setProperty('--high-lig', styles[sNum].hi)
     console.log(sNum)
 })
-/*
---text-pri: #b6b6b6
---bg-pri: #23232e
---bg-sec: #141418
---high-lig: #8950d5
-*/
+
+let not = document.querySelector('.notfications')
